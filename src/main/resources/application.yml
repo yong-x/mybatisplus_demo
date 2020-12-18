@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    username: xy
+    password: xy123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_plus_test?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mp 日志给配置，记录mapper代理类执行过程
+  mapper-locations: classpath:/mapper/**.xml  # Mapper.xml所在路径
+  type-aliases-package: com.xy.mybatisplus_demo.blog.entity #实体对象的扫描包别名，在Mapper.xml中可不写全限名
